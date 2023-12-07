@@ -1,0 +1,10 @@
+name: "HoundDog Action"
+author: "HoundDog.ai"
+description: "Detect sensitive data issues in your codebase"
+branding:
+  icon: "shield"
+  color: "blue"
+runs:
+  using: "docker"
+  image: "docker://hounddogai/scanner:latest"
+  args: ["hounddog", "scan"]

@@ -1,2 +1,1 @@
-# hounddog-actions
-GitHub Actions for detecting sensitive data issues
+# HoundDog.ai's GitHub Action 
