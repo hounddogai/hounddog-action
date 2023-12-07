@@ -1,0 +1,23 @@
+name: "HoundDog.ai Action"
+author: "HoundDog.ai"
+description: "Detect sensitive data issues in your codebase"
+branding:
+  icon: "shield"
+  color: "blue"
+inputs:
+  output_format:
+    description: "The format of the scan results. Supported formats are: console, sarif and markdown."
+    required: false
+    default: "sarif"
+  output_filename:
+    description: "The name of the file to save the scan results to."
+    required: false
+    default: "hounddog.sarif"
+runs:
+  using: "docker"
+  image: "docker://hounddogai/scanner:latest"
+  args:
+    - hounddog
+    - scan
+    - --output-format=${{ inputs.output_format }}
+    - --output-filename=${{ inputs.output_filename }}
