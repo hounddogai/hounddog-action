@@ -26,8 +26,7 @@ For more configuration options, please see the [HoundDog.ai documentation](https
 
 ## Example
 
-The following GitHub Actions workflow runs a HoundDog.ai scan on pull requests and uploads the results to GitHub
-Advanced Security:
+The GitHub Actions workflow below runs a HoundDog.ai scan on and uploads the results to GitHub Advanced Security:
 
 ```yaml
 name: HoundDog.ai Scan
@@ -51,7 +50,7 @@ jobs:
           output_filename: hounddog.sarif
 
       - name: Upload scan results to GitHub Advanced Security
-        uses: github/codeql-action/upload-sarif@v2
+        uses: github/codeql-action/upload-sarif@v3
         with:
           sarif_file: hounddog.sarif
 ```
